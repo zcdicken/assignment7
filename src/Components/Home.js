@@ -35,8 +35,6 @@ function Home() {
                 <input type="text" placeholder={"Subtitle"} name={"subTitle"} onChange={handleChange}></input>
                 <input type="text" placeholder={"Text"} name={"text"} onChange={handleChange}></input>
                 <button onClick={handleSubmit}>Submit</button>
-                {obj.title}
-                {title}
             </div>
         )
 }
