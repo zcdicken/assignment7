@@ -1,10 +1,8 @@
 import React from 'react';
-import {useSelector} from 'react-redux';
 import {useDispatch} from "react-redux";
 import {changeTitle, changeSubTitle, changeText} from "../redux/setActions";
 
 function Home() {
-    const title = useSelector(state=>state.title);
 
     const [obj, setObj] = React.useState({
         title:"",
@@ -31,10 +29,12 @@ function Home() {
 
         return(
             <div>
-                <input type="text" placeholder={"Title"} name={"title"} onChange={handleChange}></input>
-                <input type="text" placeholder={"Subtitle"} name={"subTitle"} onChange={handleChange}></input>
-                <input type="text" placeholder={"Text"} name={"text"} onChange={handleChange}></input>
-                <button onClick={handleSubmit}>Submit</button>
+                <form>
+                    <input type="text" placeholder={"Title"} name={"title"} onChange={handleChange} required></input>
+                    <input type="text" placeholder={"Subtitle"} name={"subTitle"} onChange={handleChange} required></input>
+                    <input type="text" placeholder={"Text"} name={"text"} onChange={handleChange} required></input>
+                    <button onClick={handleSubmit}>Submit</button>
+                </form>
             </div>
         )
 }
