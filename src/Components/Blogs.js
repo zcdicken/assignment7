@@ -1,11 +1,16 @@
 import React from 'react';
+import {useSelector} from "react-redux";
 
 function Blogs() {
-    return (
+    const title = useSelector(state=>state.title);
+    const subTitle = useSelector(state=>state.subTitle);
+    const text = useSelector(state=>state.text);
+
+    return(
         <div>
-            <p>Name:Bob | age: 19 | color: Teal | id: 1</p>
-            <p>Name:Hammy | age: 67 | color: Orange | id: 2</p>
-            <p>Name:Bigface | age: 26 | Color: Red | Id: 3</p>
+            <h1>{title}</h1>
+            <h2>{subTitle}</h2>
+            <h3>{text}</h3>
         </div>
     )
 }
