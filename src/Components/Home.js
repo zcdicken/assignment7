@@ -29,12 +29,10 @@ function Home() {
 
         return(
             <div>
-                <form>
-                    <input type="text" placeholder={"Title"} name={"title"} onChange={handleChange} required></input>
-                    <input type="text" placeholder={"Subtitle"} name={"subTitle"} onChange={handleChange} required></input>
-                    <input type="text" placeholder={"Text"} name={"text"} onChange={handleChange} required></input>
-                    <button onClick={handleSubmit}>Submit</button>
-                </form>
+                <input type="text" placeholder={"Title"} name={"title"} onChange={handleChange} required></input>
+                <input type="text" placeholder={"Subtitle"} name={"subTitle"} onChange={handleChange} required></input>
+                <input type="text" placeholder={"Text"} name={"text"} onChange={handleChange} required></input>
+                <button onClick={handleSubmit}>Submit</button>
             </div>
         )
 }
